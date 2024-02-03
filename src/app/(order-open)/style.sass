@@ -1,0 +1,32 @@
+.Dashboard
+    padding: 2rem 0
+    .DashboardWrapper
+        display: flex
+        justify-content: space-between
+        .OrderInfo
+            width: 70%
+.OrderHeader
+    display: flex
+    justify-content: space-between
+    height: 4.75rem
+    align-content: center
+    align-items: center
+    text-transform: uppercase
+    cursor: pointer
+.OpenOrderPageLinks
+    .OpenOrderPageLink
+        color: rgba(35, 37, 33, 0.60)
+        text-decoration: none
+        &.active
+            color: #232521
+
+@media screen and ( max-width: 992px )
+    .Dashboard 
+        .DashboardWrapper
+            flex-direction: column
+            .OrderInfo
+                width: 100%
+            .CostBreakup
+                width: 100%
+                .CostBreakupCounting
+                    width: auto

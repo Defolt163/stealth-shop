@@ -1,0 +1,12 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 46">
+<circle id="Ellipse 16" cx="24" cy="24" r="23" fill="url(#paint0_radial_4_180)" stroke="#232521" stroke-width="2"/>
+<path id="Vector" d="M24 30C27.3137 30 30 27.3137 30 24C30 20.6863 27.3137 18 24 18C20.6863 18 18 20.6863 18 24C18 27.3137 20.6863 30 24 30Z" fill="#70FF00"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_4_180" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24 24) rotate(90) scale(24)">
+<stop offset="0.588543" stop-color="#ECF6F6" stop-opacity="0"/>
+<stop offset="1" stop-color="#9BDBDB"/>
+</radialGradient>
+</defs>
+</svg>

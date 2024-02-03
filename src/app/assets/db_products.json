@@ -1,0 +1,113 @@
+[
+    {
+        "id": 1,
+        "ProductName": "Прицел",
+        "ProductDescr": "Stealth Vision®️’s scope is revolutionary because its patent-pending anti-cant green light technology confirms to you, the shooter, when your target is in your crosshairs and you are good to squeeze the trigger from over 1,000 yards away. Ensuring accuracy from long distances is a challenge because the brain will try to convince you your aim is perfect, when in reality, the brain is giving you false signals which will cause your rifle’s inevitable tilt. This is an obstacle Stealth Vision®️’s anti-cant green light technology will overcome, enabling a true shot. It’s the only scope that actually eliminates all the variables that you need to make that once-in-a-lifetime shot - said Dr. McCall Jr., who developed the scope after 40-plus years in optometric medicine. Familiar with long range shooting struggles after participating in over 30 worldwide safaris, Dr. McCall Jr. successfully applied his medical expertise to build a technology that closes the gap between you and the world’s best military snipers.",
+        "ProductPrice": 8.750,
+        "ProductImage": "../static/img/scope.png",
+        "ProductImageCard": "static/img/cards/74a08ab1d5dc13168f7495258fb0208c.jpg",
+        "ProductOption": 3,
+        "ProductRate": 5,
+        "ProductParameters": {
+            "NominalPower": {
+                "LowPower": "5X",
+                "HighPower": "30X",
+                "Tolerance": "- 2%"
+            },
+            "ActualPower": {
+                "LowPower": "5.00X",
+                "HighPower": "30.00X",
+                "Tolerance": "± 5%"
+            },
+            "EffectiveObjectiveDiameter": {
+                "LowPower": "16.89 in",
+                "HighPower": "22.5 in",
+                "Tolerance": "± 0.3 in"
+            },
+            "ExitPupil": {
+                "LowPower": "3.35 in",
+                "HighPower": "0.75 in",
+                "Tolerance": "±0.3 in"
+            },
+            "ActualFOV": {
+                "LowPower": "4.25°",
+                "HighPower": "0.71°",
+                "Tolerance": "±5%"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "ProductName": "Винтовка + Прицел",
+        "ProductDescr": "Stealth Vision®️’s scope is revolutionary because its patent-pending anti-cant green light technology confirms to you, the shooter, when your target is in your crosshairs and you are good to squeeze the trigger from over 1,000 yards away.",
+        "ProductPrice": 23.750,
+        "ProductImage": "../static/img/rifle+scope.png",
+        "ProductImageCard": "static/img/cards/6ef08df352075100dbf1d1ebf25ec78f.jpg",
+        "ProductOption": 1,
+        "ProductRate": 5,
+        "ProductParameters": {
+            "NominalPower": {
+                "LowPower": "6X",
+                "HighPower": "30X",
+                "Tolerance": "- 2%"
+            },
+            "ActualPower": {
+                "LowPower": "5.00X",
+                "HighPower": "30.00X",
+                "Tolerance": "± 5%"
+            },
+            "EffectiveObjectiveDiameter": {
+                "LowPower": "16.89 in",
+                "HighPower": "22.5 in",
+                "Tolerance": "± 0.3 in"
+            },
+            "ExitPupil": {
+                "LowPower": "3.35 in",
+                "HighPower": "0.75 in",
+                "Tolerance": "±0.3 in"
+            },
+            "ActualFOV": {
+                "LowPower": "4.25°",
+                "HighPower": "0.71°",
+                "Tolerance": "±5%"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "ProductName": "Бинокль",
+        "ProductDescr": "Stealth Vision®️’s scope is revolutionary because its patent-pending anti-cant green light technology confirms to you, the shooter, when your target is in your crosshairs and you are good to squeeze the trigger from over 1,000 yards away.",
+        "ProductPrice": 23.750,
+        "ProductImage": "../static/img/binocular.png",
+        "ProductImageCard": "static/img/cards/864bc1c40d3760c98123422653f132f1.jpg",
+        "ProductOption": 1,
+        "ProductRate": 5,
+        "ProductParameters": {
+            "NominalPower": {
+                "LowPower": "5X",
+                "HighPower": "30X",
+                "Tolerance": "- 2%"
+            },
+            "ActualPower": {
+                "LowPower": "5.00X",
+                "HighPower": "30.00X",
+                "Tolerance": "± 5%"
+            },
+            "EffectiveObjectiveDiameter": {
+                "LowPower": "16.89 in",
+                "HighPower": "22.5 in",
+                "Tolerance": "± 0.3 in"
+            },
+            "ExitPupil": {
+                "LowPower": "3.35 in",
+                "HighPower": "0.75 in",
+                "Tolerance": "±0.3 in"
+            },
+            "ActualFOV": {
+                "LowPower": "4.25°",
+                "HighPower": "0.71°",
+                "Tolerance": "±5%"
+            }
+        }
+    }
+]

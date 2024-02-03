@@ -1,0 +1,121 @@
+@import ./variables
+
+
+
+@font-face 
+    font-family: Inter
+    font-weight: 300
+    src: url(../../public/static/fonts/Inter/Inter-Regular.ttf)
+
+@font-face 
+    font-family: Inter
+    font-weight: 400
+    src: url(../../public/static/fonts/Inter/Inter-Medium.ttf)
+
+@font-face 
+    font-family: Inter
+    font-weight: 500
+    src: url(../../public/static/fonts/Inter/Inter-SemiBold.ttf)
+
+*
+    font-family: Inter
+    font-weight: 400
+    margin: 0
+    padding: 0
+
+body
+    overflow-x: hidden
+
+.container
+    max-width: 90vw !important
+    margin: 0 auto !important
+
+.Button
+    padding: 0.75rem 2rem
+    border-radius: 6.25rem
+    border: 1px solid #232521
+    width: min-content
+    cursor: pointer
+.ButtonPromo
+    text-transform: uppercase
+    background: #fff
+    border: none
+    font-weight: 600
+    display: flex
+    align-items: center
+    text-decoration: none
+    color: #000
+    span
+        margin-left: 2rem
+.ButtonOrder
+    display: flex
+    align-items: center
+    background-color: #232521
+    color: #FFFFFF
+    .arrowico
+        margin-left: 0.75rem
+
+.PageSubHeader
+    color: #232521
+    font-family: Inter
+    font-size: 2rem
+    font-weight: 600
+    letter-spacing: -0.08rem
+.PageSubHeaderLink
+    color: #232521
+    text-align: center
+    font-family: Inter
+    font-size: 1rem
+    font-weight: 600
+    text-transform: uppercase
+.SectionHeader
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 2.5rem
+
+.OtherPagesInput
+    width: 26.25rem
+    padding: 1.5rem 1.25rem
+    border-radius: 6.25rem
+    border: 2px solid #232521
+    background: #FFF
+
+.AccountInput
+    width: 100%
+    padding: 1.5rem 1.25rem
+    border-radius: 5px
+    border: 1px solid #232521
+    background: #FFF
+
+
+
+// Animation
+@keyframes DropdownChevron
+    0%
+        transform: rotate(0deg) translate(0px, 0px)
+    100%
+        transform: rotate(180deg) translate(-12px, 1px)
+
+@media screen and ( max-width: 1080px )
+    .container
+        max-width: 98vw !important
+
+@media screen and ( max-width: 767px )
+    .PageSubHeaderLink
+        text-align: left
+
+@media screen and ( max-width: 450px )
+    .OtherPagesInput
+        width: 95vw
+
+@media screen and ( max-width: 400px )
+    .SectionHeader
+        flex-direction: column
+        align-items: flex-start
+        justify-content: normal
+
+        
+@media screen and ( max-width: 349px )
+    .PageSubHeader
+        width: 1.5rem

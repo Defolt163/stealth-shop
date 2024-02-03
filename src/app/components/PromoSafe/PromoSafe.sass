@@ -1,0 +1,48 @@
+@import ../../variables.sass
+.PromoSafe
+    margin-bottom: 7.5rem
+    .PromoSafeItems
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .PromoSafeItem
+            width: 24%
+            .PromoSafeItemImage
+                margin-bottom: 1.25rem
+            &:first-child
+                .PromoSafeItemImage
+                    margin-bottom: 1.5rem
+            .PromoSafeItemDescr
+                color: $other-text-color
+                font-size: 1.125rem
+                font-style: normal
+                font-weight: 400
+                .PromoSafeItemDescrLink
+                    color: $other-text-color
+                    font-weight: 600
+
+@media screen and ( max-width: 767px )
+    .PromoSafe 
+        margin-bottom: 3.5rem
+        
+@media screen and ( max-width: 767px )
+    .PromoSafe 
+        .PromoSafeItems 
+            flex-wrap: wrap
+            justify-content: normal
+            gap: 20px
+            .PromoSafeItem
+                width: 48%
+
+@media screen and ( max-width: 523px )
+    .PromoSafe 
+        .PromoSafeItems
+            gap: 0
+            .PromoSafeItem
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                margin-bottom: 3rem
+                .PromoSafeItemDescr
+                    text-align: center

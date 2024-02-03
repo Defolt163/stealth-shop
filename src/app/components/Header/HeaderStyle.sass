@@ -1,0 +1,195 @@
+@import ../../global.sass
+@import ../../variables.sass
+.Header
+    background-color: #fff
+    .HeaderWrapper
+        display: flex
+        justify-content: space-between
+        height: 4.75rem
+        align-content: center
+        align-items: center
+        color: #232521
+        text-transform: uppercase
+        .logo
+            img
+                height: auto
+                width: 6.75rem
+        .HeaderMenu
+            display: flex
+            list-style: none
+            justify-content: center
+            margin: 0
+            .HeaderMenuItem
+                margin-right: 2rem
+                position: relative
+                &:last-child
+                    margin-right: 0
+                a
+                    text-decoration: none
+                    color: #232521
+                    display: flex
+                    padding: 1rem
+                    .Chevron
+                        transform: rotate(0deg) translate(0px, 0px)
+                        .ChevronLine
+                            position: relative
+                            transform: rotate(45deg) translate(9px, 6px)
+                            width: 10px
+                            height: 2px
+                            background-color: #232521
+                            &::before
+                                content: ''
+                                position: absolute
+                                top: -10px
+                                left: 10px
+                                transform: rotate(90deg) translate(5px, 5px)
+                                width: 10px
+                                height: 2px
+                                background-color: #232521
+                &.active
+                    a
+                        .Chevron
+                            transform: rotate(180deg) translate(-12px, 1px)
+                            .ChevronLine
+                                position: relative
+                                transform: rotate(45deg) translate(7px, 5px)
+                                width: 10px
+                                height: 2px
+                                background-color: #232521
+                                &::before
+                                    content: ''
+                                    position: absolute
+                                    top: -10px
+                                    left: 10px
+                                    transform: rotate(90deg) translate(5px, 5px)
+                                    width: 10px
+                                    height: 2px
+                                    background-color: #232521
+                    .DropdownMenu
+                        display: block
+                .DropdownMenu
+                    display: none
+                    position: absolute
+                    top: 3rem
+                    left: 0
+                    z-index: 99
+                    background-color: #fff
+                    padding: 1rem
+                    list-style: none
+                    .DropdownMenuItem
+                        padding: 1rem
+        .UserActions
+            display: flex
+            justify-content: center
+            align-items: center
+            .UserShopCart
+                height: auto
+                width: 2rem
+            a, .ButtonUser
+                text-decoration: none
+                color: #232521
+                margin-right: 2rem
+
+.Header
+    .HeaderWrapper
+        .Humburger
+            display: none
+            .HumburgerIcoWrapper
+                div
+                    width: 3rem
+                    height: 3px
+                    background-color: #000
+                    border-radius: 5px
+                    &:first-child
+                        transform: translateY(1rem)
+                        transition: all 0.5s
+                    &:nth-child(2)
+                            width: 100%
+                            transition: all 0.5s
+                    &:last-child
+                        transform: translateY(-1rem)
+                        transition: all 0.5s
+            &.active
+                .HumburgerIcoWrapper
+                    div
+                        &:first-child
+                            transform: translateY(3px) rotate(45deg)
+                            transition: all 0.5s
+                        &:nth-child(2)
+                            width: 0
+                            transition: all 0.5s
+                        &:last-child
+                            transform: translateY(-3px) rotate(-45deg)
+                            transition: all 0.5s
+.HumburgerMenu
+    overflow-y: scroll
+    position: absolute
+    width: 0
+    top: 76px
+    right: -100%
+    height: calc( 100vh - 76px )
+    z-index: 3
+    background-color: #fff
+    color: $other-text-color
+    transition: width 0.5s
+    padding-bottom: 1rem
+    &.active
+        right: 0
+        width: 60vw
+        transition: width 1s
+    .HeaderMenu
+        font-size: 1.7rem
+        list-style: none
+        margin-bottom: 0
+        .HeaderMenuItem 
+            padding: 1.7rem 2rem
+            &:last-child
+                padding-bottom: 0
+            a
+                color: $other-text-color
+                text-decoration: none
+                .Chevron
+                    transform: rotate(180deg) translate(-12px, 1px)
+                    .ChevronLine
+                        position: relative
+                        transform: rotate(45deg) translate(7px, 5px)
+                        width: 10px
+                        height: 2px
+                        background-color: #232521
+                        &::before
+                            content: ''
+                            position: absolute
+                            top: -10px
+                            left: 10px
+                            transform: rotate(90deg) translate(5px, 5px)
+                            width: 10px
+                            height: 2px
+                            background-color: #232521
+            .DropdownMenu
+                list-style: none
+                .DropdownMenuItem
+                    padding: 1.7rem 0
+    .UserActions
+        display: flex
+        justify-content: space-evenly
+        .ButtonUser
+            width: 40%
+            text-align: center
+
+
+@media screen and ( max-width: 992px )
+    .Header
+        .HeaderWrapper
+            .HeaderMenu
+                display: none
+            .UserActions
+                display: none
+            .Humburger
+                display: block
+        
+@media screen and ( max-width: 512px )
+    .HumburgerMenu
+        .HeaderMenu
+            padding-left: 0
+        &.active
+            width: 100vw

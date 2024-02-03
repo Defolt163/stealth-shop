@@ -1,0 +1,81 @@
+@import ../variables
+.AuthPage
+    display: flex
+    height: calc( 100vh - 146px )
+    .AuthPageFirstBlock
+        width: 50%
+        display: flex
+        align-items: center
+        .AuthPageFirstBlockWrapper
+            width: 50%
+            margin: 0 auto
+            .AuthPageHeader
+                color: $other-text-color
+                text-align: center
+                font-size: 2rem
+                font-weight: 400
+                margin-bottom: 0.5rem
+            .AuthPageDescr
+                display: block
+                width: 100%
+                text-align: center
+                color: $other-text-color
+                text-decoration: none
+                span
+                    font-weight: 700
+                &:hover
+                    text-decoration: underline
+            .InputBlock
+                display: flex
+                flex-direction: column
+                margin-bottom: 1.75rem
+                .InputAuthItem
+                    border-radius: 6.25rem
+                    border: solid 1px $other-text-color
+                    padding: 1.5rem 1.5rem
+                    margin-bottom: 0.75rem
+                    &:focus-visible
+                        outline: none
+                    &:last-child
+                        margin-bottom: 0
+                .LoginBtn
+                    cursor: pointer
+                    text-align: center
+                    border-radius: 6.25rem
+                    border: solid 1px #fff
+                    color: #fff
+                    padding: 1rem 1rem
+                    margin-bottom: 0.75rem
+                    background-color: $other-text-color
+    .AuthPageSecondBlock
+        width: 50%
+        background: url('../../../public/static/img/cards/6ef08df352075100dbf1d1ebf25ec78f.jpg') center center/cover no-repeat
+    
+@media screen and ( max-width: 1600px )
+    .AuthPage 
+        .AuthPageFirstBlock 
+            .AuthPageFirstBlockWrapper
+                width: 75%
+
+@media screen and ( max-width: 992px )
+    .AuthPage 
+        .AuthPageFirstBlock 
+            .AuthPageFirstBlockWrapper
+                width: 90%
+
+@media screen and ( max-width: 692px )
+    .AuthPage 
+        .AuthPageFirstBlock 
+            width: 100%
+            .AuthPageFirstBlockWrapper
+                width: 90%
+        .AuthPageSecondBlock
+            display: none
+            
+
+@media screen and ( max-width: 692px )
+    .AuthPage 
+        .AuthPageFirstBlock 
+            .AuthPageFirstBlockWrapper 
+                .AuthPageHeader
+                    font-size: 1.75rem

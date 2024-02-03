@@ -1,0 +1,163 @@
+@import '../../variables'
+.ProductPage
+    .ProductPagePromo
+        padding: 7.5rem 0
+        height: calc( 100% - 76px )
+        background: radial-gradient(212.86% 136.59% at 1.63% 100%, #585D52 0%, #1C1D18 100%)
+        .ProductPagePromoWrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            .ProductPagePromoHeaderWrapper
+                color: #FFF
+                .ProductPagePromoLogo
+                    text-align: center
+                    font-size: 2rem
+                    font-weight: 500
+                    line-height: 3rem
+                .ProductPagePromoHeader
+                    text-align: center
+                    font-size: 5rem
+                    font-weight: 500
+                    line-height: 7.5rem
+                    letter-spacing: -0.2rem
+            .ProductImage
+                width: 51.5625rem
+                height: 29.125rem
+                transform: translateY(-2.5rem)
+            .ProductPagePromoInfoBlock
+                padding: 1.5rem 2.5rem
+                border-radius: 6.25rem
+                background: #3B3F34
+                display: flex
+                .ProductPagePromoInfo
+                    display: flex
+                    .ProductPagePromoInfoItem
+                        margin-right: 3rem
+                    .ProductPagePromoInfoName
+                        color: #FFF
+                        font-size: 1.25rem
+                        font-weight: 600
+                    .ProductPagePromoInfoRate
+                        .ProductPagePromoInfoRatingStars
+                            display: flex
+                        .ProductPagePromoInfoRatingScore
+                            color: #8E9287
+                            font-size: 0.875rem
+                            font-weight: 500
+                    .ProductPagePromoOtherInfo
+                        .ProductPagePromoInfoFirst
+                            color: #FFF
+                            font-size: 1.25rem
+                            font-weight: 600
+                            margin-bottom: 0.25rem
+                        .ProductPagePromoInfoSecond
+                            color: #8E9287
+                            font-size: 0.875rem
+                            font-weight: 500
+                .ProductPagePromoInfoAction
+                    display: flex
+                    .ProductPagePromoInfoActionItem
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        margin-right: 0.75rem
+                    .ProductPagePromoInfoPiceBlock
+                        border-radius: 6.25rem
+                        border: 1px solid #232521
+                        padding: 0.75rem 1rem
+                        .PiceIteration
+                            font-size: 1.5rem
+                            cursor: pointer
+                            &:first-child
+                                margin-right: 0.75rem
+                            &:last-child
+                                margin-left: 0.75rem
+                        .PieceCount
+                            border-radius: 6.25rem
+                            background: #232521
+                            padding: 0rem 0.625rem
+                            color: #FFF
+                            font-size: 1rem
+                            font-weight: 600
+    .ProductDescription
+        padding: 7.5rem 0
+        background-color: #F4F2ED
+        .ProductDescrHeader
+            color: $other-text-color
+            font-size: 2rem
+            font-weight: 600
+            letter-spacing: -0.08rem
+            margin-bottom: 2rem
+        .ProductDescr
+            color: $other-text-color
+            font-size: 1.25rem
+            font-weight: 400
+    .ProductTable
+        padding: 7.5rem 0 0 0
+        .ProductTableWrapper
+            .table-product
+                width: 100%
+                border-collapse: collapse
+                th
+                    border: 1px solid #494948
+                    padding: 0.75rem 1.25rem
+                td
+                    border: 1px solid #EBEBE6
+                    padding: 0.75rem 1.25rem
+
+.ProductOrderModal
+    display: none
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, .5)
+    &.active
+        display: block
+    .ProductOrderModalWrapper
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 40%
+        height: max-content
+        background-color: #232521
+        color: #FFF
+        padding: 4rem
+        .ProductOrderModalCloser
+            position: absolute
+            right: 1rem
+            top: 1rem
+            font-size: 1.5rem
+            color: #FFF
+            transition: color .5s
+            cursor: pointer
+            &:hover
+                color: #a11010
+                transition: color .5s
+        .ProductOrderModalActions
+            width: 100%
+            display: flex
+            justify-content: space-between
+            .ProductOrderModalAction
+                width: 45%
+                margin-top: 2rem
+                padding: 2rem
+                border-radius: 5px
+                background-color: #EBEBE6
+                cursor: pointer
+                display: flex
+                flex-direction: column
+                align-items: center
+                color: $other-text-color
+                transition: all .5s
+                .ProductOrderModalActionIco
+                    font-size: 6rem
+                    margin-bottom: 2rem
+                &:hover
+                    background-color: #cfcf4d
+                    color: #EBEBE6
+                    transition: all .5s
+

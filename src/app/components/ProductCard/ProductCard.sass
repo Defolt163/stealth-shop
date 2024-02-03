@@ -1,0 +1,66 @@
+@import /src/app/variables.sass
+.ProductCard
+    height: 100%
+    margin-right: 2rem
+    text-decoration: none
+    .ProductCardWrapper
+        .ProductCardImage
+            width: 100%
+            padding-bottom: 100%
+            background: center center/cover no-repeat
+            border-radius: 0.75rem
+        .ProductCardInfo
+            .ProductCardHeader
+                display: flex
+                justify-content: space-between
+                align-items: flex-end
+                .ProductCardHeaderWrapper
+                    margin-top: 1.3rem
+                    display: flex
+                    .ProductCardName
+                        margin-right: 0.5rem
+                        color: $card-name-color
+                        font-family: Inter
+                        font-weight: 600
+                    .ProductCardPrice
+                        margin: 0 0.5rem 
+                        color: $card-price-color
+                        font-family: Inter
+                        font-size: 1rem
+                        font-weight: 600
+                .ProductCardOptions
+                    padding: 0.12rem 0.5rem
+                    border-radius: 6.25rem
+                    border: 1px solid $card-name-color
+                    color: $card-name-color
+                    text-align: center
+                    font-size: 0.75rem
+                    font-weight: 500
+                    text-transform: uppercase
+            .ProductCardRating
+                margin-top: 0.5rem
+                display: flex
+
+.alice-carousel__stage-item
+    margin-right: 2rem !important
+
+@media screen and ( max-width: 1199px )
+    .ProductCard 
+        .ProductCardWrapper 
+            .ProductCardInfo 
+                .ProductCardHeader
+                    flex-direction: column
+                    align-items: flex-start
+            
+@media screen and ( max-width: 992px )
+    .ProductCard 
+        .ProductCardWrapper 
+            .ProductCardInfo
+                display: flex
+                flex-direction: column-reverse
+                .ProductCardHeader
+                    .ProductCardHeaderWrapper
+                        flex-direction: column
+                        margin-top: 0.5rem
+                        .ProductCardPrice
+                            margin: 0.5rem 0

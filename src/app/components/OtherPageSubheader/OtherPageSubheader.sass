@@ -1,0 +1,48 @@
+.OtherPageSubheader
+    border-bottom: 1px solid #E2E2E2
+    padding: 0.75rem 0
+    .OtherPageSubheaderWrapper
+        .OtherPageSubheaderList
+            display: flex
+            justify-content: center
+            list-style: none
+            align-items: center
+            .OtherPageSubheaderListItem
+                margin-right: 3.25rem
+                &:last-child
+                    margin-right: 0 !important
+                .OtherPageSubheaderListItemLink
+                    text-decoration: none
+                    color: rgba(35, 37, 33, 0.50)
+                    font-size: 0.75rem
+                    font-weight: 500
+                    line-height: 1rem
+                    text-transform: uppercase
+                &.active
+                    width: max-content
+                    padding: 0.5rem 1rem
+                    margin-right: 2.25rem
+                    border-radius: 6.25rem
+                    background: #232521
+                    .OtherPageSubheaderListItemLink
+                        color: #fff
+
+@media screen and ( max-width: 418px )
+    .OtherPageSubheader
+        .OtherPageSubheaderWrapper
+            .OtherPageSubheaderList
+                padding: 0 1.5rem
+                flex-direction: column
+                align-items: flex-start
+                .OtherPageSubheaderListItem
+                    width: 100%
+                    margin: 0 0 2rem 0
+                    &.active
+                        padding: 0
+                        margin: 0 0 2rem 0
+                        width: 100%
+                        list-style: disc
+                        background: none
+                        .OtherPageSubheaderListItemLink
+                            color: #000
+                            text-decoration: underline

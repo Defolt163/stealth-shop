@@ -1,0 +1,259 @@
+.MainPage
+    .Promo
+        height: 90%
+        padding: 9.75em 0 5rem 0
+        background: url(../../public/static/img/promo.png) center center/cover no-repeat
+        display: flex
+        align-items: center
+        position: relative
+        .backdrop
+            display: none
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            background-color: #4C514D
+            z-index: -1
+        .PromoWrapper
+            display: flex
+            justify-content: space-between
+            .PromoInfo
+                width: 49%
+                display: flex
+                flex-direction: column
+                justify-content: center
+                .PromoDescr
+                    color: #FFF
+                    font-family: Inter
+                    font-size: 3.25rem
+                    font-weight: 600
+                .ButtonPromo
+                    margin-top: 2rem
+            .PromoImageBlock
+                display: flex
+                width: 49%
+                position: relative
+                justify-content: center
+                .plus
+                    top: 9rem
+                    left: 4rem
+                    position: absolute
+                    width: 3rem
+                    height: 0.2rem
+                    background-color: #000
+                    &::before
+                        position: absolute
+                        content: ''
+                        left: 0
+                        top: 0
+                        transform: rotate(90deg)
+                        width: 100%
+                        height: 0.2rem
+                        background-color: #000
+                .PromoImageLine
+                    .SquareInfo
+                        margin: 0.75rem 0.75rem 0.75rem 0
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        padding: 1.25rem
+                        width: 16.75rem
+                        height: 13.5rem
+                        border-radius: 0.75rem
+                        background: rgba(162, 166, 156, 0.40)
+                        backdrop-filter: blur(22px)
+                        .SquareInfoHeader
+                            color: #FFF
+                            font-weight: 500
+                            font-size: 0.75rem
+                            opacity: 0.6
+                        .SquareInfoDescr
+                            color: #FFF
+                            font-weight: 500
+                            font-size: 1rem
+                        .SquareInfoWrapper
+                            margin: 0 auto
+                            height: 50%
+                            width: 50%
+                            img
+                                width: 100%
+                                height: 100px
+                                object-fit: contain
+                                margin: 0 auto
+                .PromoImageLineFirst
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-end
+                    img
+                        width: calc( 100% - 0.75rem )
+                        height: 13.5rem
+                        border-radius: 0.75rem
+                        object-fit: cover
+                    .SquareInfo
+                        .SquareInfoWrapper
+                            position: relative
+                            &::before
+                                content: ''
+                                position: absolute
+                                border-radius: 50%
+                                top: 0
+                                left: 0
+                                width: 100%
+                                height: 100%
+                                background: radial-gradient(109.22% 109.22% at 50% 132%, rgba(222, 183, 204, 0.00) 36.46%, #DEB7CC 100%)
+                                opacity: 0.4
+                                filter: blur(10px)
+                .PromoImageLineSecond
+                    transform: translateY(-3rem)
+                    .SquareInfo
+                        &:nth-of-type(2)
+                            height: 8.25rem
+                            position: relative
+                            overflow: hidden
+                            .SquareInfoWrapper
+                                width: 30%
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                img
+                                    width: 60%
+                                    height: auto
+                                    padding: 0.3rem
+                                    border: 3px solid #fff
+                                    border-radius: 50%
+                                span
+                                    position: absolute
+                                    bottom: 0
+                                    color: #fff
+                                    transform: rotate(90deg) translateY(-6px)
+                        &:nth-of-type(3)
+                            background: #232521
+                            height: 8.25rem
+                            position: relative
+                            overflow: hidden
+                            .SquareInfoWrapper
+                                width: 24%
+                                .DotIco
+                                    margin: 0 auto
+                                    width: 100%
+                                    padding-bottom: 100%
+                                    border-radius: 50%
+                                    border: 2px solid #1F201E
+                                    background: radial-gradient(50% 50% at 50% 50%, rgba(112, 255, 0, 0.00) 0%, #70FF00 100%)
+                                span
+                                    top: 0
+                                    transform: rotate(90deg) translateY(-25%)
+                                    color: #fff
+                                    position: absolute
+
+@media screen and ( max-height: 825px )
+    .MainPage 
+        .Promo
+            .PromoWrapper 
+                .PromoImageBlock 
+                    .PromoImageLine 
+                        .SquareInfo
+                            height: max-content
+                    .PromoImageLineSecond
+                        transform: translateY(0rem)
+
+    
+
+@media screen and ( max-width: 1300px )
+    .MainPage 
+        .Promo 
+            .PromoWrapper
+                .PromoInfo 
+                    .PromoDescr
+                        font-size: 3rem
+                .PromoImageBlock 
+                    .PromoImageLine 
+                        .SquareInfo
+                            width: 12.75rem
+                    .PromoImageLineSecond 
+                        .SquareInfo
+                            &:nth-of-type(3)
+                                .SquareInfoWrapper 
+                                    span
+                                        transform: rotate(90deg) translateY(1px)
+                            
+@media screen and ( max-width: 1080px )
+    .MainPage 
+        .Promo 
+            .PromoWrapper
+                .PromoInfo 
+                    width: 55%
+                    .PromoDescr
+                        font-size: 2rem
+                .PromoImageBlock 
+                    width: 43%
+                    .PromoImageLine 
+                        .SquareInfo
+                            width: 10.75rem
+                    .PromoImageLineSecond 
+                        .SquareInfo
+                            &:nth-of-type(3)
+                                .SquareInfoWrapper 
+                                    span
+                                        transform: rotate(90deg) translateY(5px)
+                            
+@media screen and ( max-width: 992px )
+    .MainPage 
+        .Promo 
+            .backdrop
+                display: block
+                height: 220vh
+            .PromoWrapper
+                flex-direction: column
+                align-items: center
+                .PromoInfo 
+                    width: 90%
+                    align-items: center
+                    .PromoDescr
+                        font-size: 2rem
+                        text-align: center
+                .PromoImageBlock 
+                    width: 97%
+                    position: absolute
+                    bottom: -40.5rem
+                    .PromoImageLine 
+                        width: 50%
+                        .SquareInfo
+                            width: auto
+                    .PromoImageLineSecond
+                        .SquareInfo
+                            margin: 0.75rem 0 0.75rem 0
+                            &:nth-of-type(3)
+                                .SquareInfoWrapper 
+                                    span
+                                        left: 50%
+                                        transform: rotate(90deg) translateY(92%)
+
+@media screen and ( max-width: 398px )
+    .MainPage 
+        .Promo 
+            .PromoWrapper
+                .PromoImageBlock 
+                    width: 90%
+                    flex-direction: column
+                    bottom: -54rem
+                    .PromoImageLine
+                        width: 100%
+                        .PlaneImage
+                            display: none
+                        .SquareInfo
+                            width: auto
+                            margin: 0.75rem 0 0.75rem 0
+                    .PromoImageLineFirst
+                        .SquareInfo
+                            margin: 0
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: -4rem
+                        height: 103%
+                        left: -10px
+                        background-color: #000
+                        z-index: -1
+
+

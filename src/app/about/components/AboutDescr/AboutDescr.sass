@@ -1,0 +1,72 @@
+@import ../../../variables.sass
+.AboutDescr
+    padding: 7.5rem 0
+    display: flex
+    justify-content: space-between
+    .AboutDescrPromo
+        width: 50%
+        .AboutDescrPromoHeader
+            color: $other-text-color
+            font-family: Inter
+            font-size: 3.25rem
+            font-weight: 600
+            line-height: 4.5rem
+            letter-spacing: -0.13rem
+        .AboutDescrPromoSubheaderItem
+            margin: 3rem 0 0 0
+            .ItemHeader
+                color: $other-text-color
+                font-size: 1.5rem
+                font-weight: 600
+                line-height: 2.25rem
+                letter-spacing: -0.06rem
+            .ItemSubheader
+                color: $other-text-color
+                font-size: 1rem
+                font-weight: 400
+                line-height: 1.75rem
+    .AboutDescriptionBlock
+        width: 50%
+        .AboutDescriptionItems
+            .AboutDescriptionItem
+                position: relative
+                margin-top: 3rem
+                color: $other-text-color
+                &::marker
+                    color: #DAD5CA
+                    font-size: 1.7rem
+                    line-height: 0
+                &:first-child
+                    margin-top: 0
+                .VerticalLine
+                    z-index: -1
+                    position: absolute
+                    left: -1.3124rem
+                    top: 0.5rem
+                    height: calc( 100% + 3rem )
+                    border: 1px dashed rgba(0, 0, 0, 0.08)
+
+@media screen and ( max-width: 1130px )
+    .AboutDescr 
+        .AboutDescrPromo
+            width: 45%
+
+@media screen and ( max-width: 992px )
+    .AboutDescr 
+        .AboutDescrPromo 
+            .AboutDescrPromoHeader
+                font-size: 2.25rem
+                line-height: 3rem
+
+@media screen and ( max-width: 718px )
+    .AboutDescr
+        flex-direction: column
+        .AboutDescrPromo
+            width: 100%
+            margin-bottom: 3rem
+        .AboutDescriptionBlock
+            width: 100%
+        .AboutDescriptionBlock
+            .AboutDescriptionItems
+                margin: 0 auto
+                width: 90%

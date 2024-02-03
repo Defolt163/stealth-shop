@@ -1,0 +1,135 @@
+.TopProductBlock
+    background-color: #4C514D
+    padding: 7.5rem 0
+    overflow-x: hidden
+    .TopProductBlockWrapper
+        .TopProductBlockInfo
+            width: 50%
+            .TopProductBlockInfoHeader
+                color: #FFF
+                font-size: 1.125rem
+                font-weight: 500
+                line-height: 1.875rem
+                margin-bottom: 1.25rem
+            .TopProductBlockInfoDescr
+                color: #FFF
+                font-family: Inter
+                font-size: 2rem
+                font-style: normal
+                font-weight: 400
+                line-height: 3rem
+                letter-spacing: -0.08rem
+                margin-bottom: 2.5rem
+                span
+                    font-family: Inter
+                    font-size: 2rem
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 3rem
+                    letter-spacing: -0.08rem
+        .TopProductInfoBlockProduct
+            display: flex
+            .TopProductBlockProduct
+                width: 50%
+                .TopProductBlockProductItem
+                    cursor: pointer
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    padding: 1.25rem
+                    border-bottom: 1px solid #3E4640
+                    border-radius: 0.75rem
+                    .TopProductBlockProductItemInfo
+                        display: flex
+                        align-items: center
+                        .TopProductBlockProductItemNumber
+                            color: rgba(255, 255, 255, 0.40)
+                            font-family: Inter
+                            font-size: 1.25rem
+                            font-style: normal
+                            font-weight: 300
+                            margin-right: 3rem
+                        .TopProductBlockProductItemName
+                            color: rgba(255, 255, 255, 0.40)
+                            font-family: Inter
+                            font-size: 1.25rem
+                            font-style: normal
+                            font-weight: 300
+                    .TopProductBlockProductItemByNow
+                        display: none
+                        color: #232521
+                        text-align: center
+                        font-family: Inter
+                        font-size: 0.875rem
+                        font-style: normal
+                        font-weight: 400
+                        text-transform: uppercase
+                        padding: 0.88rem 3rem
+                        background-color: #fff
+                        border-radius: 6.25rem
+                    &.active
+                        background: #3E4640
+                        .TopProductBlockProductItemInfo
+                            .TopProductBlockProductItemNumber
+                                color: #FFF
+                            .TopProductBlockProductItemName
+                                color: #FFF
+                        .TopProductBlockProductItemByNow
+                            display: block
+            .TopProductBlockProductImage
+                width: 50%
+                position: relative
+                .TopProductImage
+                    display: none
+                    position: absolute
+                    transform: translateY(-50%)
+                    top: 0
+                    right: -9rem
+                    width: 100%
+                    height: auto
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        border-radius: 50%
+                        opacity: 0.2
+                        background: radial-gradient(54.05% 53.01% at 50% 50%, #B2C4B6 44.27%, rgba(178, 196, 182, 0.00) 100%)
+                        filter: blur(10px)
+                    &.active
+                        display: block
+                    &.Other
+                        width: 70%
+                        right: 0
+                    &.RifleAndScope
+                        top: -8rem
+                        right: -27%
+                        transform: scale(1.4)
+
+@media screen and ( max-width: 992px )
+    .TopProductBlock 
+        padding: 3.5rem 0
+        .TopProductBlockWrapper 
+            .TopProductBlockInfo
+                width: 94%
+            .TopProductInfoBlockProduct 
+                .TopProductBlockProduct 
+                    .TopProductBlockProductItem
+                        flex-direction: column
+                        align-items: stretch
+                        .TopProductBlockProductItemByNow
+                            margin-top: 1rem
+                .TopProductBlockProductImage
+                    .TopProductImage
+                        transform: translateY(0) scale(1.25)
+                        left: 4rem
+                        &:nth-child(2)
+                            top: 4rem
+                            left: 17rem
+                            transform: scale(2.4)
+
+@media screen and ( max-width: 767px )
+    .TopProductBlock
+        display: none

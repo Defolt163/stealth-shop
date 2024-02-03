@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "rate": 5,
+        "name": "Rohan W.",
+        "text": "Превосходно, красиво и быстро, и я с удовольствием предвкушаю свою работу.",
+        "type": 1,
+        "date": "12/01/22"
+    },
+    {
+        "id": 2,
+        "rate": 3,
+        "name": "Alan S.",
+        "text": "Got my package and went this pass weekend and the first 3 shot at 200 yard was a little high and to the right.",
+        "type": 2,
+        "date": "10/02/22"
+    },
+    {
+        "id": 3,
+        "rate": 5,
+        "name": "Lorie B.",
+        "text": "Bought the 6.5 PRC. I don't shoot a lot. Usually shoot my gun right before season just to verify it is on and put it away until next year.",
+        "type": 3,
+        "date": "24/02/22"
+    }
+]
