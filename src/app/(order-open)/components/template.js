@@ -9,24 +9,14 @@ export default function TemplateDash ({ children }) {
     const router = useRouter()
     const [cookies] = useCookies(['UserData'])
     const userData = cookies.UserData
-    const [priceValue, setPieceValue] = useState()
 
-    const getPriceValue = (value) => {
-        setPieceValue(value)
-      }
     if (userData?.logginin === true) {
         return (
                 <div className="Dashboard">
                     <div className="container">
                         <div className="DashboardWrapper">
-                            {priceValue <= 7.5 ? 
-                                <div className='LoadingScreen'>
-                                    <div>Загрузка товаров из корзины...</div>
-                                    <div>Если ваша корзина пуста или вы не авторизованы нажмите на кнопку</div>
-                                    <div onClick={()=>{router.back()}}>Назад</div>
-                                </div> : <div className="OrderInfo">{children}</div>
-                            }
-                            <CostBreakup callback={getPriceValue}/>
+                            <div className="OrderInfo">{children}</div>
+                            <CostBreakup/>
                         </div>
                     </div>
                 </div>

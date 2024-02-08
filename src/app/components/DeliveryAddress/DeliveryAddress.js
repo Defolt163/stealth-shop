@@ -195,7 +195,7 @@ export default function DeliveryAdress(props){
             </div>
             <input id='saveDeliveryData' className={`saveDeliveryData ${props.checkbox}`} type='checkbox' onChange={() => setCheckboxState((state) => !state)}/> <label for='saveDeliveryData' className={`saveDeliveryData ${props.checkbox}`}>Сохранить данные</label>
             <div className='OpenOrderActions'>
-                <Link href='/cart' className={`OpenOrderActionLink ${props.toBack}`}><i className="fa-solid fa-arrow-left"></i> Вернуться в корзину</Link>
+                <Link href={'/cart'} className={`OpenOrderActionLink ${props.toBack}`}><i className="fa-solid fa-arrow-left"></i> Вернуться в корзину</Link>
                 <div className='Button ButtonOrder' onClick={()=>{productId != null || typeof productId != 'undefined' ? openOrder() : setUserSettingProfile()}} settingsPage={props.settingsPage || false}>{props.BtnDescr} <i className="arrowico fa-solid fa-arrow-right"></i></div>
             </div>
         </>

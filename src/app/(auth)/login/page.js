@@ -83,7 +83,7 @@ export default function LoginPage(){
                     <div className="AuthPageHeader">Войти в аккаунт</div>
                     <form className="InputBlock">
                         <input className="InputAuthItem" required placeholder="Email" type="email" value={inputLogin} onChange={(event) => setInputLogin(event.target.value)}/>
-                        <input className="InputAuthItem" required placeholder="Пароль" type="password" name="password" minlength="8" value={inputPassword} onChange={(event) => setInputPassword(event.target.value)}/>
+                        <input className="InputAuthItem" required placeholder="Пароль" type="password" name="password" minLength="8" value={inputPassword} onChange={(event) => setInputPassword(event.target.value)}/>
                         <div className='LoginBtn' type="submit" onClick={()=>{handleAuth()}}>Войти</div>
                     </form>
                     <Link className='AuthPageDescr' href='/reset-password'>Забыли пароль?</Link>

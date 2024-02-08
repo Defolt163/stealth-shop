@@ -6,7 +6,7 @@ import GetUser from '../../configFiles/MysqlRequests/requestfile'
 import productDB from '../../assets/db_products.json'
 import { useEffect, useState } from 'react'
 
-export default function CostBreakup({ callback }){
+export default function CostBreakup(){
     const [cookies] = useCookies(['UserData'])
     const userData = cookies.UserData
     let UserId = userData.userId
@@ -25,19 +25,13 @@ export default function CostBreakup({ callback }){
         getUrlParams()
     }, [])
 
-    let CartPrice = data[0]?.UserCart
-    let TotalPrice = CartPrice ? productDB[CartPrice].ProductPrice : 0
+    let CartPrice = data[0]?.UserCart - 1
+    let TotalPrice = productDB[CartPrice]?.ProductPrice
     let SplitMode = productId === undefined ? ((TotalPrice+30)/4).toFixed(3) : ((productId.ProductPrice+30)/4).toFixed(2)
 
     
-    const handleClick = () => {
-        let value = SplitMode
-        callback(value);
-    }
 
-    useEffect(()=>{
-        handleClick()
-    },[productId, productId?.ProductPrice, SplitMode])
+
     
     return(
         <div className="CostBreakup">

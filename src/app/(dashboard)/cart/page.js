@@ -13,6 +13,7 @@ export default function CartPage(){
 
     let CartItem = data[0]?.UserCart
     let cartItem = productDB[parseInt(CartItem) - 1]
+    
     async function removeFromCart() {
         await fetch(`/api/data?UserId=${UserId}`, {
           method: 'PUT',

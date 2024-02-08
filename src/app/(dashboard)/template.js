@@ -1,19 +1,22 @@
 'use client'
 import { useCookies } from "react-cookie";
-import AccountMenu from "../components/AccountMenu/AccountMenu";
 import './style.sass'
 import { useRouter } from "next/navigation";
+import dynamic from 'next/dynamic'
+
 
 export default function Template({ children }) {
     const router = useRouter()
     const [cookies] = useCookies(['UserData'])
     const userData = cookies.UserData
-    if (userData?.logginin === true) {
+    
+    const AccountMenu = dynamic(() => import('../components/AccountMenu/AccountMenu'), { ssr: false })
+    if (userData?.logginin) {
         return (
           <div className="Dashboard">
             <div className="container">
               <div className="DashboardWrapper">
-                <AccountMenu className="AccountMenu" />
+                <AccountMenu className="AccountMenu" suppressHydrationWarning/>
                 <div className="AccountInfo">{children}</div>
               </div>
             </div>
