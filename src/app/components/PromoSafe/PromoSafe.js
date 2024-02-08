@@ -15,25 +15,25 @@ export default function PromoSafe(){
                 </div>
                 <div className="PromoSafeItems">
                     <div className="PromoSafeItem">
-                        <Image className="PromoSafeItemImage" src={ShieldIco}/>
+                        <Image alt="Shield" className="PromoSafeItemImage" src={ShieldIco}/>
                         <div className="PromoSafeItemDescr">
                             Безопасные, защищенные, быстрые и проверенные каналы оплаты
                         </div>
                     </div>
                     <div className="PromoSafeItem">
-                        <Image className="PromoSafeItemImage" src={TruckIco}/>
+                        <Image alt="Truck" className="PromoSafeItemImage" src={TruckIco}/>
                         <div className="PromoSafeItemDescr">
                             Безопасные, защищенные, быстрые и проверенные каналы оплаты
                         </div>
                     </div>
                     <div className="PromoSafeItem">
-                        <Image className="PromoSafeItemImage" src={Dollar}/>
+                        <Image alt="Dollar" className="PromoSafeItemImage" src={Dollar}/>
                         <div className="PromoSafeItemDescr">
                             Гарантия возврата денег на 30 дней + легкий возврат
                         </div>
                     </div>
                     <div className="PromoSafeItem">
-                        <Image className="PromoSafeItemImage" src={PhoneCall}/>
+                        <Image alt="PhoneCall" className="PromoSafeItemImage" src={PhoneCall}/>
                         <div className="PromoSafeItemDescr">
                             Есть какие-либо вопросы? у нас есть служба поддержки звонков для всех <br/> <Link className="PromoSafeItemDescrLink" href='/'>Связаться с нами</Link>
                         </div>

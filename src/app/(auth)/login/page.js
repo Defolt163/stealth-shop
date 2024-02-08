@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import '../style.sass'
-import GetUser from '../../configFiles/MysqlRequests/requestfile'
+import GetUser from '../../configFiles/MysqlRequests/loginrequest'
 import {useState} from 'react'
 import { useRouter } from 'next/navigation'
 
@@ -82,8 +82,8 @@ export default function LoginPage(){
                 <div className='AuthPageFirstBlockWrapper'>
                     <div className="AuthPageHeader">Войти в аккаунт</div>
                     <form className="InputBlock">
-                        <input className="InputAuthItem" placeholder="Email" type="email" value={inputLogin} onChange={(event) => setInputLogin(event.target.value)}/>
-                        <input className="InputAuthItem" placeholder="Пароль" type="password" name="password" minlength="8" value={inputPassword} onChange={(event) => setInputPassword(event.target.value)}/>
+                        <input className="InputAuthItem" required placeholder="Email" type="email" value={inputLogin} onChange={(event) => setInputLogin(event.target.value)}/>
+                        <input className="InputAuthItem" required placeholder="Пароль" type="password" name="password" minlength="8" value={inputPassword} onChange={(event) => setInputPassword(event.target.value)}/>
                         <div className='LoginBtn' type="submit" onClick={()=>{handleAuth()}}>Войти</div>
                     </form>
                     <Link className='AuthPageDescr' href='/reset-password'>Забыли пароль?</Link>

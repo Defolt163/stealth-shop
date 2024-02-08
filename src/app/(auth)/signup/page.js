@@ -51,10 +51,32 @@ export default function SignUpPage(){
                 <div className='AuthPageFirstBlockWrapper'>
                     <div className="AuthPageHeader">Регистрация</div>
                     <div className="InputBlock">
-                        <input className="InputAuthItem" placeholder="Ваше имя" value={userName} onChange={(event) => setUserName(event.target.value)}/>
-                        <input className="InputAuthItem" placeholder="Введите Email" type="email" value={userEmail} onChange={(event) => setUserEmail(event.target.value)}/>
-                        <input className="InputAuthItem" placeholder="Введите пароль" type="password" name="password" minlength="8" value={userPassword} onChange={(event) => setUserPassword(event.target.value)}/>
-                        <input className="InputAuthItem" placeholder="Подтвердите пароль" value={userPasswordConfirm} onChange={(event) => setUserPasswordConfirm(event.target.value)}/>
+                        <input className="InputAuthItem" 
+                            placeholder="Ваше имя" 
+                            type='text' value={userName} 
+                            onChange={(event) => setUserName(event.target.value)}/>
+                        <input className="InputAuthItem" 
+                            required 
+                            placeholder="Введите Email" 
+                            type="email" 
+                            value={userEmail} 
+                            onChange={(event) => setUserEmail(event.target.value)}/>
+                        <input className="InputAuthItem" 
+                            required 
+                            placeholder="Введите пароль" 
+                            type="password" 
+                            name="password" 
+                            minLength="8" 
+                            value={userPassword} 
+                            onChange={(event) => setUserPassword(event.target.value)}/>
+                        <input className="InputAuthItem" 
+                            required 
+                            type="password" 
+                            name="password" 
+                            minLength="8" 
+                            placeholder="Подтвердите пароль" 
+                            value={userPasswordConfirm} 
+                            onChange={(event) => setUserPasswordConfirm(event.target.value)}/>
                         <div className='LoginBtn' onClick={()=>{SendAccount()}}>Зарегистрироваться</div>
                     </div>
                     <Link className='AuthPageDescr' href='/login'>Уже с нами? <span>Войдите</span></Link>

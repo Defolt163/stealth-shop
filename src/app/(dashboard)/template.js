@@ -8,17 +8,18 @@ export default function Template({ children }) {
     const router = useRouter()
     const [cookies] = useCookies(['UserData'])
     const userData = cookies.UserData
-    return (
-        userData?.logginin === true ? (
-            <div className="Dashboard">
-                <div className="container">
-                    <div className="DashboardWrapper">
-                        <AccountMenu className="AccountMenu"/>
-                        <div className="AccountInfo">{children}</div>
-                    </div>
-                </div>
+    if (userData?.logginin === true) {
+        return (
+          <div className="Dashboard">
+            <div className="container">
+              <div className="DashboardWrapper">
+                <AccountMenu className="AccountMenu" />
+                <div className="AccountInfo">{children}</div>
+              </div>
             </div>
-        ) : router.push('/login')
-        
-    ) 
+          </div>
+        );
+      } else if (typeof window !== 'undefined') {
+        router.push('/login')
+      }
   }

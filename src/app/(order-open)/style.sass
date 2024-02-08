@@ -1,4 +1,5 @@
 .Dashboard
+    min-height: calc( 100vh - 146px )
     padding: 2rem 0
     .DashboardWrapper
         display: flex
@@ -6,6 +7,10 @@
         .OrderInfo
             width: 70%
 .OrderHeader
+    position: absolute
+    top: 0
+    left: auto
+    width: 100%
     display: flex
     justify-content: space-between
     height: 4.75rem
@@ -19,6 +24,21 @@
         text-decoration: none
         &.active
             color: #232521
+
+.LoadingScreen
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    .CostBreakup
+        display: none
+    div
+        margin-bottom: 2rem
+        &:last-child
+            cursor: pointer
+            text-decoration: underline
 
 @media screen and ( max-width: 992px )
     .Dashboard 

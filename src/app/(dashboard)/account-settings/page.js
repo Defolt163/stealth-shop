@@ -1,7 +1,6 @@
-'use client'
-import DeliveryAdress from '../../components/DeliveryAdress/DefliveryAdress'
+import DeliveryAddress from '../../components/DeliveryAddress/DeliveryAddress'
 export default function AccountSettings(){
     return(
-        <DeliveryAdress toBack='disabled' BtnDescr="Сохранить"/>
+        <DeliveryAddress toBack='disabled' checkbox='disabled' settingsPage={true} BtnDescr="Сохранить"/>
     )
 }

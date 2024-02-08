@@ -1,0 +1,30 @@
+.PrivatePolicy
+    .OpenOrderPageLinks
+        margin: 32px 0 34px 0
+        .OpenOrderPageLink
+            color: rgba(35, 37, 33, 0.60)
+            text-decoration: none
+            &.active
+                color: #232521
+    .PrivatePolicyWrapper
+        display: flex
+        justify-content: space-between
+        .PolicyBlock
+            width: 69%
+    .PrivatePolicyHeader
+        color: rgb(35, 37, 33)
+        font-size: 2rem
+        font-weight: 600
+        line-height: 3rem
+        letter-spacing: -4%
+        text-align: left
+            
+@media screen and ( max-width: 992px )
+    .PrivatePolicy 
+        .PrivatePolicyWrapper
+            flex-direction: column
+            .PolicyBlock
+                width: 100%
+                margin-top: 2rem
+            
+                    

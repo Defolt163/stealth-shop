@@ -25,6 +25,8 @@
 
 body
     overflow-x: hidden
+    min-height: 100vh
+    padding-top: 76px
 
 .container
     max-width: 90vw !important
@@ -82,11 +84,31 @@ body
     background: #FFF
 
 .AccountInput
-    width: 100%
-    padding: 1.5rem 1.25rem
+    width: -webkit-fill-available
+    padding: 1.5rem 0 1.5rem 1.25rem
     border-radius: 5px
     border: 1px solid #232521
     background: #FFF
+
+.OpenOrderInput
+    height: 2.5rem !important
+    border: none
+    border-bottom: 0.0625rem solid #E2E2E2
+    width: 100%
+    outline: none
+    margin-bottom: 2rem
+    
+.OrderInputPhone
+    color: #232521
+    font-size: 0.875rem
+    font-weight: 500
+    line-height: 1.375rem
+    .PhoneInputCountryIconUnicode
+        font-size: 1.5rem
+    .PhoneInputInput
+        border: none
+        outline: none
+        margin-left: 0.75rem
 
 
 
@@ -105,11 +127,15 @@ body
     .PageSubHeaderLink
         text-align: left
 
+@media screen and ( max-width: 592px )
+    .AccountInput
+        width: 100%
+
 @media screen and ( max-width: 450px )
     .OtherPagesInput
         width: 95vw
 
-@media screen and ( max-width: 400px )
+@media screen and ( max-width: 767px )
     .SectionHeader
         flex-direction: column
         align-items: flex-start

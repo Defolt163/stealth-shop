@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import './AccountMenu.sass';
 import { useRouter } from 'next/navigation';
@@ -7,6 +6,7 @@ import GetUser from "../../configFiles/MysqlRequests/requestfile";
 import { useCookies } from 'react-cookie';
 
 export default function AccountMenu() {
+  
   const [cookies] = useCookies(['UserData'])
   const userData = cookies.UserData
   let UserId = userData.userId
@@ -15,8 +15,10 @@ export default function AccountMenu() {
 
   const router = useRouter()
   function deleteCookie() {
-    document.cookie = "UserData" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    router.push('/')
+    document.cookie = "UserData" + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+    if (typeof window !== 'undefined') {
+      router.push('/')
+    }
   }
 
     return (
@@ -28,9 +30,9 @@ export default function AccountMenu() {
               Аккаунт
             </Link>
             <Link href='/account-settings' className={`AccountMenuItem`}>
-              Адреса
+              Адрес
             </Link>
-            <Link href='/' className={`AccountMenuItem`}>
+            <Link href='/orders' className={`AccountMenuItem`}>
               Заказы
             </Link>
             <Link href='/cart' className={`AccountMenuItem`}>

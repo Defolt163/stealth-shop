@@ -1,0 +1,96 @@
+.PrivatePolicyBlock
+    width: 25%
+    .PrivatePolicyBlockWrapper
+        list-style: none
+        width: 100%
+        .PrivatePolicyBlockLink
+            padding: 24px 0
+            display: flex
+            color: rgb(226, 226, 226)
+            font-size: 1rem
+            font-weight: 500
+            line-height: 1.63rem
+            text-decoration: none
+            width: 100%
+            justify-content: space-between
+            text-align: left
+            &:last-child
+                border-bottom: 1px solid rgb(226, 226, 226)
+            &.active
+                color: #232521
+                border-bottom: 1px solid #232521
+        .HelpMore
+            color: rgba(35, 37, 33, 0.6)
+            font-size: 1rem
+            font-weight: 500
+            line-height: 1.63rem
+            margin: 32px 0 16px 0
+        .HelpMoreItem
+            .HelpMoreBtn
+                border: 0.06rem solid rgb(226, 226, 226)
+                border-radius: 0.75rem
+                width: calc( 100% - 40px )
+                display: flex
+                justify-content: space-between
+                padding: 20px
+                color: rgba(35, 37, 33, 0.88)
+                font-size: 1.13rem
+                font-weight: 600
+                line-height: 1.75rem
+                text-decoration: none
+                span
+                    position: relative
+                    margin-right: 15px
+                    &::after
+                        position: absolute
+                        padding: 100%
+                        content: ''
+                        border-radius: 50%
+                        border: 1px solid rgba(35, 37, 33, 0.88)
+                        left: 50%
+                        top: -50%
+                        transform: translate(-50%, 56%)
+
+
+@media screen and ( max-width: 992px )
+    .PrivatePolicyBlock
+        width: 100%
+        .PrivatePolicyBlockWrapper
+            display: flex
+            padding: 0
+            justify-content: space-between
+            flex-wrap: wrap
+            .HelpMore
+                display: none
+            .HelpMoreItem
+                .HelpMoreBtn
+                    padding: 24px 0
+                    color: rgb(110, 127, 224)
+                    font-size: 1rem
+                    font-weight: 500
+                    line-height: 1.63rem
+                    text-decoration: none
+                    width: 100%
+                    justify-content: space-between
+                    border: none
+                    border-radius: 0
+                    border-bottom: 1px solid rgb(226, 226, 226)
+                    span
+                        display: none
+                    .PrivacyItemChevron
+                        display: none
+            .PrivacyItemChevron
+                display: none
+                    
+@media screen and ( max-width: 720px )
+    .PrivatePolicyBlock 
+        .PrivatePolicyBlockWrapper
+            align-items: flex-end
+            li
+                width: 50%
+
+@media screen and ( max-width: 381px )
+    .PrivatePolicyBlock 
+        .PrivatePolicyBlockWrapper
+            li
+                width: 100%

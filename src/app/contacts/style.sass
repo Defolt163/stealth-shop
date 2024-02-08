@@ -1,0 +1,95 @@
+.ContactPage
+    padding-top: 80px
+    display: flex
+    justify-content: space-between
+    min-height: calc( 100vh - 146px )
+    .ContactAddresses
+        width: 49%
+        .ContactAddressBlock
+            .ContactAddressItem
+                margin-bottom: 4rem
+                &:nth-of-type(2)
+                    margin-bottom: 6rem
+                .ContactAddressDescr
+                    display: flex
+                    .ContactItemIco
+                        height: auto
+                        width: auto
+                        padding: 12px
+                        border-radius: 0.75rem
+                        background: rgb(236, 241, 238)
+                        margin-right: 20px
+                    .ContactAddressLine
+                        position: relative
+                        .ContactAddressHeader
+                            color: rgba(35, 37, 33, 0.88)
+                            font-size: 1.13rem
+                            font-weight: 600
+                            line-height: 1.75rem
+                        .ContactAddressSubheader
+                            color: rgba(35, 37, 33, 0.6)
+                            font-size: 0.88rem
+                            font-weight: 500
+                            line-height: 1.38rem
+                        .ContactAddressLink
+                            position: absolute
+                            transform: translateY(12px)
+                            color: rgb(35, 37, 33)
+                            font-size: 1rem
+                            font-weight: 500
+                            line-height: 1.5rem
+                            text-decoration: none
+    .ContactAddressForm
+        width: 50%
+        .ContactAddressFormBlock
+            .ContactAddressFormActions
+                display: flex
+                align-items: center
+                justify-content: space-between
+                .ContactAddressFormReturn
+                    cursor: pointer
+
+
+
+.ContactHeader
+    color: rgb(35, 37, 33)
+    font-size: 2rem
+    font-weight: 600
+    line-height: 3rem
+    letter-spacing: -4%
+.ContactSubheader
+    color: rgba(35, 37, 33, 0.88)
+    font-size: 1.25rem
+    font-weight: 500
+    line-height: 1.88rem
+    margin-bottom: 48px
+
+@media screen and ( max-width: 992px )
+    .ContactPage
+        flex-direction: column
+        height: auto
+        padding: 2rem
+        .ContactAddresses
+            width: 100%
+        .ContactAddressForm
+            width: 100%
+
+@media screen and ( max-width: 480px )
+    .ContactHeader
+        font-size: 1.5rem
+    .ContactSubheader
+        font-size: 1.05rem
+    .ContactPage 
+        .ContactAddresses 
+            .ContactAddressBlock 
+                .ContactAddressItem
+                    margin-bottom: 6rem
+
+@media screen and ( max-width: 347px )
+    .ContactPage 
+        .ContactAddressForm 
+            .ContactAddressFormBlock 
+                .ContactAddressFormActions
+                    flex-direction: column
+                    .ContactAddressFormReturn
+                        margin-bottom: 2rem

@@ -60,13 +60,13 @@ export default function Header(){
                                     onMouseEnter={()=>(openDropdown('targeting'))} 
                                     onMouseLeave={()=>(closeDropdown())}
                                     >
-                                    <li className='DropdownMenuItem'>Оптические прицелы</li>
-                                    <li className='DropdownMenuItem'>Калиматоры</li>
-                                    <li className='DropdownMenuItem'>Инфракрасные прицелы</li>
+                                    <Link href='/product/1' className='DropdownMenuItem'>Оптический прицел</Link>
+                                    <Link href='/' className='DropdownMenuItem'>Калиматоры</Link>
+                                    <Link href='/' className='DropdownMenuItem'>Инфракрасные прицелы</Link>
                                 </ul>
                             </li>
-                            <li className='HeaderMenuItem'><Link href='/'>Винтовки + Прицелы</Link></li>
-                            <li className='HeaderMenuItem'><Link href='/'>Бинокли</Link></li>
+                            <li className='HeaderMenuItem'><Link href='/product/2'>Винтовка + Прицел</Link></li>
+                            <li className='HeaderMenuItem'><Link href='/product/3'>Бинокль</Link></li>
                             <li className={`HeaderMenuItem ${dropdownStatus === 'other' ? 'active' : ''}`}>
                                 <Link 
                                     href='/' 
@@ -83,8 +83,7 @@ export default function Header(){
                                     >
                                     <li className='DropdownMenuItem'><Link href='/about'>О нас</Link></li>
                                     <li className='DropdownMenuItem'><Link href='/helpful'>Помощь</Link></li>
-                                    <li className='DropdownMenuItem'><Link href='/'>Ресурсы</Link></li>
-                                    <li className='DropdownMenuItem'><Link href='/'>Контакты</Link></li>
+                                    <li className='DropdownMenuItem'><Link href='/contacts'>Контакты</Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -123,13 +122,13 @@ export default function Header(){
                                 onMouseEnter={()=>(openDropdown('targeting'))} 
                                 onMouseLeave={()=>(closeDropdown())}
                                 >
-                                <li className='DropdownMenuItem'>Оптические прицелы</li>
-                                <li className='DropdownMenuItem'>Калиматоры</li>
-                                <li className='DropdownMenuItem'>Инфракрасные прицелы</li>
+                                <li className='DropdownMenuItem'><Link href='/product/1'>Оптический прицел</Link></li>
+                                <li className='DropdownMenuItem'><Link href='/'>Калиматоры</Link></li>
+                                <li className='DropdownMenuItem'><Link href='/'>Инфракрасные прицелы</Link></li>
                             </ul>
                         </li>
-                        <li className='HeaderMenuItem'><Link href='/'>Винтовки + Прицелы</Link></li>
-                        <li className='HeaderMenuItem'><Link href='/'>Бинокли</Link></li>
+                        <li className='HeaderMenuItem'><Link href='/product/2'>Винтовка + Прицел</Link></li>
+                        <li className='HeaderMenuItem'><Link href='/product/3'>Бинокль</Link></li>
                         <li className={`HeaderMenuItem`}>
                             <Link 
                                 href='/' 
@@ -146,18 +145,17 @@ export default function Header(){
                                 >
                                 <li className='DropdownMenuItem'><Link href='/about'>О нас</Link></li>
                                 <li className='DropdownMenuItem'><Link href='/helpful'>Помощь</Link></li>
-                                <li className='DropdownMenuItem'><Link href='/'>Ресурсы</Link></li>
-                                <li className='DropdownMenuItem'><Link href='/'>Контакты</Link></li>
+                                <li className='DropdownMenuItem'><Link href='/contacts'>Контакты</Link></li>
                             </ul>
                         </li>
                     </ul>
                     <div className='UserActions'>
                         <div onClick={()=>{
-                                userData?.logginin === true ? deleteCookie() : router.push('/login')
+                                userData?.logginin === true ? router.push('/account') & openHumburger() : router.push('/login')
                             }} className='Button ButtonUser'>
-                            {
-                                userData?.logginin === true ? 'Выйти' : "Войти"
-                            }
+                                {
+                                    userData?.logginin === true ? 'Аккаунт' : "Войти"
+                                }
                         </div>
                         <Link href='/' className='Button ButtonUser'>Корзина</Link>
                     </div>

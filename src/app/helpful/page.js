@@ -10,8 +10,8 @@ export default function HelpfulPage(){
         <div className="Helpful">
             <OtherPageSubheader faq='active'/>
             <div className="HelpfulPromo">
-                <Image className='BgObjImage BgRingCircle' src={bgObjRings}/>
-                <Image className='BgObjImage BgOtherRings' src={bgObjOtherRings}/>
+                <Image alt="rings" className='BgObjImage BgRingCircle' src={bgObjRings}/>
+                <Image alt="rings" className='BgObjImage BgOtherRings' src={bgObjOtherRings}/>
                 <div className="container">
                     <div className="HelpfulPromoWrapper">
                         <div className="HelpfulPromoHeader">Часто задаваемые вопросы</div>

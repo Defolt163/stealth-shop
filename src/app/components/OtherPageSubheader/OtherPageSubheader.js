@@ -9,8 +9,7 @@ export default function OtherPageSubheader(props){
                     <ul className="OtherPageSubheaderList">
                         <li className={`OtherPageSubheaderListItem ${props.about}`}><Link className="OtherPageSubheaderListItemLink" href='/about'>О нас</Link></li>
                         <li className={`OtherPageSubheaderListItem ${props.faq}`}><Link className="OtherPageSubheaderListItemLink" href='/helpful'>Помощь</Link></li>
-                        <li className={`OtherPageSubheaderListItem ${props.blog}`}><Link className="OtherPageSubheaderListItemLink" href='/'>Ресурсы</Link></li>
-                        <li className={`OtherPageSubheaderListItem ${props.contacts}`}><Link className="OtherPageSubheaderListItemLink" href='/'>Контакты</Link></li>
+                        <li className={`OtherPageSubheaderListItem ${props.contacts}`}><Link className="OtherPageSubheaderListItemLink" href='/contacts'>Контакты</Link></li>
                     </ul>
                 </div>
             </div>

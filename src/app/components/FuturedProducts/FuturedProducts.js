@@ -41,8 +41,8 @@ export default function FuturedProducts(){
         ))
 
     const responsive = {
-        0: { items: 1 },
-        568: { items: 2 },
+        0: { items: 2 },
+        568: { items: 3},
         992: { items: 3 },
         1024: { items: 4, itemsFit: 'contain' },
     };
@@ -56,18 +56,7 @@ export default function FuturedProducts(){
                     <Link className="PageSubHeaderLink" href='/'>Посмотреть больше</Link>
                 </div>
                 <div className="FuturedProductsBlock">
-                    <AliceCarousel mouseTracking items={item} responsive={responsive} infinite={true}/>
-                    {/* {cardDB.map(ProductItem=>(
-                        <ProductCard 
-                            key={ProductItem.id}
-                            ProductCardId={ProductItem.id} 
-                            ProductImage={ProductItem.ProductImage}
-                            ProductCardName={ProductItem.ProductName} 
-                            ProductCardPrice={ProductItem.ProductPrice} 
-                            ProductCardVariant={ProductItem.ProductOption}
-                            ProductRate={ProductItem.ProductRate}
-                        />
-                    ))} */}
+                    <AliceCarousel mouseTracking items={item} autoPlayInterval={1000} responsive={responsive} infinite={true}/>
                 </div>
             </div>
         </div>

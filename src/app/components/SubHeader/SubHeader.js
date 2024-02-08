@@ -9,9 +9,8 @@ export default function SubHeader(){
                     <div className="SubHeaderItem active" href='/'>Товары</div>
                     <Link className="SubHeaderItem" href='/about'>О нас</Link>
                     <Link className="SubHeaderItem" href='/helpful'>Помощь</Link>
-                    <Link className="SubHeaderItem" href='/'>Гарантия</Link>
-                    <Link className="SubHeaderItem" href='/'>Обзор</Link>
-                    <Link className="SubHeaderItem" href='/'>Контакты</Link>
+                    <Link className="SubHeaderItem" href='/private-policy/service'>Гарантия</Link>
+                    <Link className="SubHeaderItem" href='/contacts'>Контакты</Link>
                 </div>
             </div>
         </div>

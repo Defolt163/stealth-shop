@@ -29,22 +29,22 @@ export default function Home() {
             <div className='PromoImageBlock'>
               <div className='plus'></div>
               <div className='PromoImageLine PromoImageLineFirst'>
-                <Image className='PlaneImage' src={PlaneImage} alt='Самолет' width='auto' height='auto'/>
+                <Image className='PlaneImage' src={PlaneImage} alt='Plane' width='auto' height='auto'/>
                 <div className='SquareInfo'>
                   <div className='SquareInfoHeader'>Высокая мобильность</div>
-                  <div className='SquareInfoWrapper'><Image src={DegIco} alt='120 градусов'/></div>
+                  <div className='SquareInfoWrapper'><Image alt="120deg" src={DegIco}/></div>
                   <div className='SquareInfoDescr'>Горизонтальное вращение</div>
                 </div>
               </div>
               <div className='PromoImageLine PromoImageLineSecond'>
                 <div className='SquareInfo'>
                   <div className='SquareInfoHeader'>Поляризационный фильтр</div>
-                  <div className='SquareInfoWrapper'><Image src={PercentsIco} alt='87%'/></div>
+                  <div className='SquareInfoWrapper'><Image alt="87%" src={PercentsIco}/></div>
                   <div className='SquareInfoDescr'>Рассеивание прямых лучей</div>
                 </div>
                 <div className='SquareInfo'>
                   <div className='SquareInfoHeader'>Увеличительное стекло</div>
-                  <div className='SquareInfoWrapper'><Image src={SearchIco} alt='увеличительное стекло'/><span>. . . . . . .</span></div>
+                  <div className='SquareInfoWrapper'><Image alt="scope glass" src={SearchIco}/><span>. . . . . . .</span></div>
                   <div className='SquareInfoDescr'>Micro3X</div>
                 </div>
                 <div className='SquareInfo'>

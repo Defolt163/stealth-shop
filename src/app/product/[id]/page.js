@@ -9,6 +9,7 @@ import PromoSafe from '../../components/PromoSafe/PromoSafe'
 import { useEffect, useState } from 'react'
 import GetUser from '../../configFiles/MysqlRequests/requestfile'
 import { useCookies } from 'react-cookie'
+import Link from 'next/link'
 
 export default function ProductPage(){
     const [cookies] = useCookies(['UserData'])
@@ -19,24 +20,24 @@ export default function ProductPage(){
     const [productId, setProductId] = useState(null)
     const [productAddCartId, setProductAddCartId] = useState(null)
 
-    const [pieceCount, setPieceCount] = useState(1);
+    const [pieceCount, setPieceCount] = useState(1)
 
     const decreasePieceCount = () => {
         if (pieceCount > 1) {
-        setPieceCount(pieceCount - 1);
+        setPieceCount(pieceCount - 1)
         }
     };
 
     const increasePieceCount = () => {
-        setPieceCount(pieceCount + 1);
+        setPieceCount(pieceCount + 1)
     };
 
     useEffect(() => {
         const getUrlParams = () => {
-        const url = window.location.pathname;
-        const parts = url.split('/');
-        const id = parts[parts.length - 1]-1;
-        setProductId(id);
+        const url = window.location.pathname
+        const parts = url.split('/')
+        const id = parts[parts.length - 1]-1
+        setProductId(id)
         setProductAddCartId(id+1)
         };
 
@@ -48,12 +49,12 @@ export default function ProductPage(){
 
     
     // Получаем текущий массив cart из объекта userData
-    const currentCart = data.UserCart || [];
+    const currentCart = data.UserCart || []
 
     
             
     // Добавляем productId в текущий массив cart
-    const updatedCart = [...currentCart, productAddCartId];
+    const updatedCart = [...currentCart, productAddCartId]
     function cartAdd() {
         fetch(`/api/data?UserId=${UserId}`, {
             method: 'PUT',
@@ -77,7 +78,7 @@ export default function ProductPage(){
         return(
             <>Загрузка</>
         );
-      }
+    }
     
     const product = database[productId]
     const productImagePath = `${product.ProductImage}`
@@ -91,7 +92,7 @@ export default function ProductPage(){
                             <div className='ProductPagePromoLogo'>Stealth Vision®</div>
                             <div className='ProductPagePromoHeader'>{product.ProductName}</div>
                         </div>
-                        <div className='ProductImage' style={{background: `url(${productImagePath}) center center/contain no-repeat`}}></div>
+                        <div className='ProductImage' alt={product.ProductName} style={{background: `url(${productImagePath}) center center/contain no-repeat`}}></div>
                         <div className='ProductPagePromoInfoBlock'>
                             <div className='ProductPagePromoInfo'>
                                 <div className='ProductPagePromoInfoItem ProductPagePromoInfoName'>Stealth Vision® {product.ProductName}</div>
@@ -187,10 +188,10 @@ export default function ProductPage(){
                             <i className="ProductOrderModalActionIco fa-solid fa-cart-plus"></i>
                             <div className='ProductOrderModalActionDescr'>В корзину</div>
                         </div>
-                        <div className='ProductOrderModalAction'>
+                        <Link href={`/cart/open-order/${product.id}`} className='ProductOrderModalAction'>
                             <i className="ProductOrderModalActionIco fa-regular fa-file"></i>
                             <div className='ProductOrderModalActionDescr'>Оформить заказ</div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 

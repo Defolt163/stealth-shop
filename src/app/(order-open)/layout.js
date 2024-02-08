@@ -20,7 +20,7 @@ export default function OrderLayout({ children }) {
       <body>
         <div className="container">
           <div className="OrderHeader">
-            <div className="logo" onClick={()=>{goBack()}}><Image src={logoImage}/></div>
+            <div className="logo" onClick={()=>{goBack()}}><Image src={logoImage} alt="stealth logo"/></div>
           </div>
           <div className='OpenOrderPageLinks'>
             <Link href='/cart' className='OpenOrderPageLink'>Корзина</Link> {`> `} 

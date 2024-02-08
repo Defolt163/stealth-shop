@@ -66,10 +66,10 @@ export default function TopProductBlock(){
                             </div>
                         </div>
                         <div className='TopProductBlockProductImage'>
-                                <Image className={`TopProductImage ${dropdownStatus === 'scope' ? 'active' : ''}`} src={ScopeImage}/>
-                                <Image className={`TopProductImage RifleAndScope ${dropdownStatus === 'RifleScope' ? 'active' : ''}`} src={RifleScope}/>
-                                <Image className={`TopProductImage ${dropdownStatus === 'Binoculas' ? 'active' : ''}`} src={Binoculas}/>
-                                <Image className={`TopProductImage Other ${dropdownStatus === 'otherproduct' ? 'active' : ''}`} src={SettingsIco}/>
+                                <Image alt="scope" className={`TopProductImage ${dropdownStatus === 'scope' ? 'active' : ''}`} src={ScopeImage}/>
+                                <Image alt="scope+rifle" className={`TopProductImage RifleAndScope ${dropdownStatus === 'RifleScope' ? 'active' : ''}`} src={RifleScope}/>
+                                <Image alt="binocular" className={`TopProductImage ${dropdownStatus === 'Binoculas' ? 'active' : ''}`} src={Binoculas}/>
+                                <Image alt="gear" className={`TopProductImage Other ${dropdownStatus === 'otherproduct' ? 'active' : ''}`} src={SettingsIco}/>
                         </div>
                     </div>
                 </div>

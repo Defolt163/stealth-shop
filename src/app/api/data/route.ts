@@ -54,8 +54,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ message: "Invalid input" }, { status: 400 });
     }
 
-    let UserId = uuid(); // Генерируем уникальный идентификатор
-
     const result: any = await new Promise((resolve, reject) => {
       const userNameValue = UserName ? UserName : '';
       const userCartValue = UserCart ? UserCart : '';
@@ -65,8 +63,8 @@ export async function POST(request: NextRequest) {
       const userApartmentValue = UserApartment ? UserApartment : '';
 
       db.query(
-        "INSERT INTO user (UserId, UserName, UserEmail, UserPassword, UserCart, UserCountry, UserStreet, UserHouse, UserApartment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-        [UserId, userNameValue, UserEmail, UserPassword, userCartValue, userCountryValue, userStreetValue, userHouseValue, userApartmentValue],
+        "INSERT INTO user (UserName, UserEmail, UserPassword, UserCart, UserCountry, UserStreet, UserHouse, UserApartment) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+        [userNameValue, UserEmail, UserPassword, userCartValue, userCountryValue, userStreetValue, userHouseValue, userApartmentValue],
         (err: any, results: any) => {
           if (err) {
             reject(err);

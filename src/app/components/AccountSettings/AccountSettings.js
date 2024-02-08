@@ -26,6 +26,7 @@ export default function AccountSettings() {
     }
     
 
+    
     function setUserSettingProfile() {
         if (userPassword === '' && userNewPassword === '' && userConfirmNewPassword === "") {
             fetch(`/api/set?UserId=${UserId}`, {

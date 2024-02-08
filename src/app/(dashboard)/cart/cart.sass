@@ -26,3 +26,44 @@
             color: #fff
             border-radius: 1rem
             cursor: pointer
+    .ButtonCart
+        position: absolute
+        bottom: 40px
+        right: 5vw
+
+@media screen and ( max-width: 768px )
+    .CartPage
+        .CartItem
+            position: relative
+            .CartItemDel
+                position: absolute
+                bottom: 2rem
+                left: 17.5rem
+                font-size: 1.5rem
+                padding: 1rem 1.75rem
+        .ButtonCart
+            bottom: 25px
+
+@media screen and ( max-width: 550px )
+    .CartPage
+        .CartItem
+            .CartItemWrapper
+                .CartItemHeader
+                    margin-bottom: 1rem
+                .CartItemImage
+                    width: 51%
+                    height: auto
+                    padding-bottom: 51%
+            .CartItemDel
+                left: calc(51% + 1.75rem)
+                padding: 0.5rem 1.5rem
+        .ButtonCart
+            right: 45%
+            transform: translateX(45%)
+
+@media screen and ( max-width: 400px )
+    .CartPage
+        .CartItem
+            .CartItemDel
+                font-size: 1.5rem
+                left: calc(51% + 1rem)

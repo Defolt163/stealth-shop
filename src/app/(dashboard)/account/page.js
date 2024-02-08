@@ -1,12 +1,8 @@
 'use client'
-import { useEffect, useState } from "react";
 import AccountSettings from "../../components/AccountSettings/AccountSettings";
 import './account.sass'
 
 export default function ProfilePage() {
-  useEffect(() => {
-    document.title = 'Профиль'
-  }, []);
 
   return (
     <div className="ProfilePage">

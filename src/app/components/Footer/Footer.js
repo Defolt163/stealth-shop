@@ -6,10 +6,9 @@ export default function Footer(){
             <div className="container">
                 <div className="FooterWrapper">
                     <div className="FooterItem">© 2023, Stealth Vision®</div>
-                    <Link className="FooterItem" href='/'>Политика конфиденциальности</Link>
-                    <Link className="FooterItem" href='/'>Ресурсы</Link>
-                    <Link className="FooterItem" href='/'>Возврат</Link>
-                    <Link className="FooterItem" href='/'>Партнерство</Link>
+                    <Link className="FooterItem" href='/private-policy/confidentiality'>Политика конфиденциальности</Link>
+                    <Link className="FooterItem" href='/private-policy/refund'>Возврат</Link>
+                    <Link className="FooterItem" href='/private-policy/service'>Гарантия</Link>
                 </div>
             </div>
         </div>

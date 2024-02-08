@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server"
 import db from '../db'
-import { v4 as uuid } from 'uuid'
-import { parse } from "url"
 
 export async function PUT(request: NextRequest) {
     try {
       if (request.method === 'PUT') {
-        const { UserName, UserEmail, UserSurname, UserPassword, UserCountry, UserCity, UserStreet, UserHouse, UserApartment } = await request.json();
+        const { UserName, UserEmail, UserSurname, UserPassword, UserCountry, UserCity, UserStreet, UserHouse, UserApartment, UserPhone } = await request.json();
         const url = new URL(request.url);
         const params = new URLSearchParams(url.search);
         const UserId = params.get('UserId');
@@ -15,9 +13,9 @@ export async function PUT(request: NextRequest) {
           return NextResponse.json({ message: "Invalid UserId" }, { status: 400 });
         }
 
-        if (!UserName && !UserSurname && !UserEmail && !UserPassword) {
+        /* if (!UserName && !UserSurname && !UserEmail && !UserPassword) {
             return NextResponse.json({ message: "Invalid input" }, { status: 400 });
-        }
+        } */
 
         const result: any = await new Promise((resolve, reject) => {
           const updatedFields = [];
@@ -66,6 +64,11 @@ export async function PUT(request: NextRequest) {
           if (UserApartment) {
             updatedFields.push("UserApartment");
             fieldValues.push(UserApartment);
+          }
+
+          if (UserPhone) {
+            updatedFields.push("UserPhone");
+            fieldValues.push(UserPhone);
           }
 
           // Обновление только измененных полей

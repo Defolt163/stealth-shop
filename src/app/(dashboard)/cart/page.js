@@ -22,11 +22,12 @@ export default function CartPage(){
           body: JSON.stringify({ UserCart: -1})
         })
         alert("Удалено")
+        window.location.reload()
     }
     return(
         <div className="CartPage">
             {cartItem && cartItem.ProductName !== '' ? 
-                (<div className="CartItem">
+                (<><div className="CartItem">
                     <Link href={`/product/${cartItem.id}`} className="CartItemWrapper">
                         <div className="CartItemImage" style={{background: `url(${cartItem.ProductImageCard}) center center/cover no-repeat`}}></div>
                         <div>
@@ -35,7 +36,9 @@ export default function CartPage(){
                         </div>
                     </Link>
                     <div className="CartItemDel" onClick={()=>{removeFromCart()}}><i className="fa-solid fa-trash"></i></div>
-                </div>)
+                </div>
+                <Link href='/cart/open-order' className="Button ButtonOrder ButtonCart">Продолжить</Link></>
+                )
             : <div>Здесь пока ничего нет</div>}
         </div>
     )
